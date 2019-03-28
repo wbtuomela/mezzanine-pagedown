@@ -10,9 +10,12 @@
 }
 
 .wmd-input {
-    height: 494px;
+    height: 350px;
     width: 492px;
     resize: vertical;
+    font-family: Consolas, monospace;
+    font-size: 13px;
+    line-height: 1.3;
 }
 
 .wmd-preview
@@ -20,7 +23,7 @@
     display: inline-block;
     vertical-align: top;
     width: 454px;
-    height: 500px;
+    height: 350px;
     overflow: auto;
     margin-top: 30px;
     padding: 0 10px;
