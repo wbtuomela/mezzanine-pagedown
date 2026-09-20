@@ -2,10 +2,7 @@ from django import forms
 from django.utils.safestring import mark_safe
 from django.template.loader import render_to_string
 from django.utils.html import conditional_escape
-try:
-    from django.utils.encoding import force_str
-except ImportError:  # Django < 1.11
-    from django.utils.encoding import force_text as force_str
+from django.utils.encoding import force_str
 from django import VERSION as DJANGO_VERSION
 if DJANGO_VERSION < (1, 8):
     from django.forms.util import flatatt
@@ -39,7 +36,7 @@ class PageDownWidget(forms.Textarea):
 
         super(PageDownWidget, self).__init__(*args, **kwargs)
 
-    def render(self, name, value, attrs={}):
+    def render(self, name, value, attrs={}, renderer=None):
         if value is None: value = ''
         final_attrs = self.build_attrs(attrs, extra_attrs=dict(name=name))
         final_id = ''

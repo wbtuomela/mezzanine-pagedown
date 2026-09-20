@@ -1,8 +1,6 @@
 Mezzanine PageDown
 ==================
 
-Git mirror of https://bitbucket.org/akhayyat/mezzanine-pagedown
-
 Inspired by [mezzanine-mdown][1], [django-pagedown][2], and
 [django-markupmirror][3].
 
